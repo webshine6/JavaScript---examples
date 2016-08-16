@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problem 3.	Decimal to Hexadecimal</title>
+</head>
+<body>
+    <script>
+
+        function decimalToHex(decimal,padding) {
+            var hex = Number(decimal).toString(16).toUpperCase();
+
+            var padding =
+                    typeof (padding) === "undefined" ||
+                            padding === "null" ? 2 : padding;
+
+            if (hex.length < 2) {
+                hex = '0' + hex;
+            }
+
+            return hex;
+        }
+
+        var d = prompt("Enter a number: ");
+        var hexadecimal = decimalToHex(d,4);
+
+        window.alert(hexadecimal);
+
+    </script>
+</body>
+</html>
