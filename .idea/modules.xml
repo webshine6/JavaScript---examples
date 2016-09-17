@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/JS-Beginners.iml" filepath="$PROJECT_DIR$/.idea/JS-Beginners.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/JS-Tutorial.iml" filepath="$PROJECT_DIR$/.idea/JS-Tutorial.iml" />
+>>>>>>> 94194159a530ed8b9d65f1edba9fca766c95438c
     </modules>
   </component>
 </project>
