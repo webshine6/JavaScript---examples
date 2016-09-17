@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Sample</title>
+
+
+<script>
+
+	$(document).ready(function() {
+	 
+		$("#nav").append('<li id="lnk5"><a href="#">Link 5</a></li>'); ///  create element
+
+		$("#lnk5 a").addClass("btn btn-success"); ////  Add class to element with ID
+		$(".message").addClass("hide"); ////  Add class to element or multiple elements containing class "message"
+		
+		$("#nav a").on("click", function(){   /////  bind click on all links within nav element
+			
+			var elemId = $(this).parent().attr('id');  ///// get the ID of the parent element
+			
+			$("#nav a").removeClass('btn-success');
+			$(this).addClass('btn-success');
+			
+			$(".message").addClass("hide"); //// hide all elements with "message" class
+			$("."+elemId).removeClass("hide"); ////  show only the element that we need to show
+	
+			return false;
+		});
+			
+	});
+
+</script>
+
+  <link rel="stylesheet" href="assets/_nitro-1.6.css"/>
+  <script src="assets/jquery.1.9.1.min.js"></script>
+
+
+</head>
+<body>
+<div>
+
+  <div class="info-display primary-bgr">Info box</div>
+  <ul class="nav-x nav-sep underline-false clear-fix" id="nav">
+    <li id="lnk1">
+      <a href="file:///C:/Users/Ramona/AppData/Roaming/Skype/My%20Skype%20Received%20Files/01.htm#" class="btn btn-success">Link 1</a>
+    </li>
+    <li id="lnk2"><a href="file:///C:/Users/Ramona/AppData/Roaming/Skype/My%20Skype%20Received%20Files/01.htm#">Link 2</a></li>
+    <li id="lnk3"><a href="file:///C:/Users/Ramona/AppData/Roaming/Skype/My%20Skype%20Received%20Files/01.htm#">Link 3</a></li>
+    <li id="lnk4"><a href="file:///C:/Users/Ramona/AppData/Roaming/Skype/My%20Skype%20Received%20Files/01.htm#">Link 4</a></li></ul>
+  
+    <div class="message primary-bgr m-s p-s lnk1 hide">Success</div>
+    <div class="message success-bgr m-s p-s lnk2 hide">Success</div>
+    <div class="message warning-bgr m-s p-s lnk3 hide">Warning</div>
+    <div class="message danger-bgr m-s p-s lnk4 hide">Danger</div>
+
+</div>
+
+</body>
+</html>
